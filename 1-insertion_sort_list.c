@@ -20,7 +20,7 @@ while (new)
 last = new->prev;
 while (last && new->n < last->n)
 {
-if(last->prev)
+if (last->prev)
 {
 last->prev->next = new;
 }
