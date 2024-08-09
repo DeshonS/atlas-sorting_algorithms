@@ -20,6 +20,7 @@ if (array[j] < array[min])
 {
 min = j;
 }
+}
 if (min != i)
 {
 temp = array[min];
@@ -29,4 +30,4 @@ print_array(array, size);
 }
 }
 }
-}
+
