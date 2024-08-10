@@ -15,7 +15,7 @@ int i = low - 1;
 int t, j;
 if (low == high)
 {
-    return;
+    return i + 1;
 }
 for (j = low; j <= high - 1; j++)
 {
