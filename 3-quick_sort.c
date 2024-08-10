@@ -12,8 +12,8 @@ int part(int *array, int low, int high)
 {
 int pivot = array[high];
 int i = low - 1;
-int t;
-for (int j = low; j <= high - 1; j++)
+int t, j;
+for (j = low; j <= high - 1; j++)
 {
 if (array[j] < pivot)
 {
@@ -24,7 +24,7 @@ array[i] = array[j];
 array[j] = temp;
 }
 }
-int t = array[i + 1];
+t = array[i + 1];
 array[i + 1] = array[high];
 array[high] = t;
 return i + 1;
