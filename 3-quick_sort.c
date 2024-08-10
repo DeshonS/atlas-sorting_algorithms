@@ -17,17 +17,24 @@ for (j = low; j <= high - 1; j++)
 {
 if (array[j] < pivot)
 {
-int temp;
 i++;
+if (i != j)
+{
+int temp;
 temp = array[i];
 array[i] = array[j];
 array[j] = temp;
 print_array(array, size);
 }
 }
+}
+if (i + 1 != high)
+{
 t = array[i + 1];
 array[i + 1] = array[high];
 array[high] = t;
+print_array(array, size);
+}
 return i + 1;
 }
 
