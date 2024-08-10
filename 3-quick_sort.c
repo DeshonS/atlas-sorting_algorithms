@@ -8,7 +8,7 @@
  * Return: position
  */
 
-int part(int *array, int low, int high)
+int part(int *array, int low, int high, size_t size)
 {
 int pivot = array[high];
 int i = low - 1;
@@ -30,6 +30,7 @@ t = array[i + 1];
 array[i + 1] = array[high];
 array[high] = t;
 return i + 1;
+print_array(array, size);
 }
 
 /**
@@ -40,13 +41,13 @@ return i + 1;
  * Return: none (void)
  */
 
-void quick_sort_helper(int *array, int low, int high)
+void quick_sort_helper(int *array, int low, int high, size_t size)
 {
 if (low < high)
 {
-int pi = part(array, low, high);
-quick_sort_helper(array, low, pi - 1);
-quick_sort_helper(array, pi + 1, high);
+int pi = part(array, low, high, size);
+quick_sort_helper(array, low, pi - 1, size);
+quick_sort_helper(array, pi + 1, high, size);
 }
 }
 
@@ -63,5 +64,5 @@ if (array == NULL || size < 2)
 {
 return;
 }
-quick_sort_helper(array, 0, size - 1);
+quick_sort_helper(array, 0, size - 1, size);
 }
