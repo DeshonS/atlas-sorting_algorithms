@@ -5,6 +5,7 @@
  * @array: pointer to array
  * @low: low value of the array
  * @high: high value of the array
+ * @size: size of the array
  * Return: position
  */
 
@@ -43,6 +44,7 @@ return (i + 1);
  * @array: pointer to array
  * @low: low point in the array
  * @high: high point in the array
+ * @size: size of the array
  * Return: none (void)
  */
 
