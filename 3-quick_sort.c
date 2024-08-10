@@ -13,6 +13,10 @@ int part(int *array, int low, int high, size_t size)
 int pivot = array[high];
 int i = low - 1;
 int t, j;
+if (low = high)
+{
+    return;
+}
 for (j = low; j <= high - 1; j++)
 {
 if (array[j] < pivot)
