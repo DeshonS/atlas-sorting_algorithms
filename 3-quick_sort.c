@@ -22,6 +22,7 @@ i++;
 temp = array[i];
 array[i] = array[j];
 array[j] = temp;
+print_array(array, size);
 }
 }
 t = array[i + 1];
