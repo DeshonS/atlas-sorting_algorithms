@@ -29,7 +29,6 @@ t = array[i + 1];
 array[i + 1] = array[high];
 array[high] = t;
 return i + 1;
-print_array(array, size);
 }
 
 /**
