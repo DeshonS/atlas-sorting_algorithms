@@ -22,13 +22,13 @@ i++;
 temp = array[i];
 array[i] = array[j];
 array[j] = temp;
-print_array(array, size);
 }
 }
 t = array[i + 1];
 array[i + 1] = array[high];
 array[high] = t;
 return i + 1;
+print_array(array, size);
 }
 
 /**
