@@ -13,6 +13,7 @@ int part(int *array, int low, int high)
 int pivot = array[high];
 int i = low - 1;
 int t, j;
+size_t *size;
 for (j = low; j <= high - 1; j++)
 {
 if (array[j] < pivot)
@@ -22,6 +23,7 @@ i++;
 temp = array[i];
 array[i] = array[j];
 array[j] = temp;
+print_array(array, size);
 }
 }
 t = array[i + 1];
@@ -62,5 +64,4 @@ if (array == NULL || size < 2)
 return;
 }
 quick_sort_helper(array, 0, size - 1);
-print_array(array, size);
 }
