@@ -35,7 +35,7 @@ array[i + 1] = array[high];
 array[high] = t;
 print_array(array, size);
 }
-return i + 1;
+return (i + 1);
 }
 
 /**
